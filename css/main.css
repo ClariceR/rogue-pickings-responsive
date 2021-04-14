@@ -41,7 +41,6 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	border-bottom: 3px solid #77a466;
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
@@ -90,11 +89,12 @@ header nav ul li a{
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
-	flex-flow: column wrap;
+	flex-flow: column;
 }
 
 .main-image img {
 	width: 100%;
+	border-top: 3px solid #77a466;
 	border-bottom: 3px solid #77a466;
 }
 
@@ -168,4 +168,18 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+@media (min-width: 768px) {
+	header {
+		display: inline;
+	}
+	.bottom-section {
+		flex-flow: row;
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		flex: 1;
+	}
 }
